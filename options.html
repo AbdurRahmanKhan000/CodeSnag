@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><title>CodeSnag Settings</title><link rel="stylesheet" href="options.css"></head>
+<body>
+<main>
+  <header><div class="logo">&lt;/&gt;</div><div><h1>CodeSnag Settings</h1><p>Save once. Use forever. 100% local.</p></div></header>
+  <section><h2>Insert snippets</h2>
+    <label><input type="checkbox" id="insertEnabled"> Enable “/” insert in text boxes</label><br>
+    <label>Trigger character <input type="text" id="trigger" maxlength="1" style="width:40px"></label>
+    <p class="hint">Type the trigger, then letters, in any text box — e.g. <code>/mysql</code>. If “/” clashes with a site you use, change it here.</p>
+  </section>
+  <section><h2>Search results</h2>
+    <label><input type="checkbox" id="googleCard"> Show my saved snippets on Google search results</label>
+    <p class="hint">Only your own saved snippets are shown. Nothing is sent to Google or to any server.</p>
+  </section>
+  <section><h2>Sites where insert is off</h2>
+    <textarea id="disabledSites" placeholder="github.com&#10;example.com" rows="4"></textarea>
+    <p class="hint">One domain per line.</p>
+  </section>
+  <section><h2>Your data</h2>
+    <p id="stats"></p>
+    <button id="exportBtn">Export library (JSON)</button>
+    <button id="importBtn">Import library (JSON)</button>
+    <input type="file" id="importFile" accept="application/json" style="display:none">
+    <button id="deleteAll" class="danger">Delete all snippets</button>
+  </section>
+  <section><h2>About</h2>
+    <p>CodeSnag v1.0.0 by Abdur Rahman Khan — ARK Ecosystem. Your snippets are stored only in this browser (<code>chrome.storage.local</code>). No account, no server, no tracking. <a href="privacy-policy.html" target="_blank">Privacy policy</a> (also at docs/privacy-policy.html in the package).</p>
+  </section>
+  <button id="saveBtn" class="primary">Save settings</button>
+  <span id="saved"></span>
+</main>
+<script src="src/store.js"></script>
+<script src="options.js"></script>
+</body>
+</html>

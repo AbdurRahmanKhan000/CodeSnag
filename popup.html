@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><title>CodeSnag</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+<header>
+  <div class="logo">&lt;/&gt;</div>
+  <div><h1>CodeSnag</h1><p>Save once. Use forever.</p></div>
+  <button id="newBtn">+ New snippet</button>
+</header>
+<div id="warn"></div>
+<div class="search"><input id="search" type="text" placeholder="Search title, tag, language, or code..." autofocus></div>
+<div class="filters" id="filters"></div>
+<div id="list"></div>
+<div id="editor">
+  <input id="edTitle" placeholder="Title">
+  <div style="display:flex;gap:8px"><input id="edLang" placeholder="Language" style="flex:1"><input id="edShortcut" placeholder="Shortcut, e.g. mysql" style="flex:1"></div>
+  <input id="edTags" placeholder="Tags, comma separated">
+  <textarea id="edCode" placeholder="Paste your code here..."></textarea>
+  <button id="edSave" style="background:#16a34a;color:#fff;border:0">Save snippet</button>
+  <button id="edCancel" style="background:#fff;border:1px solid #d1d5db">Cancel</button>
+</div>
+<footer>
+  <span id="count"></span>
+  <button id="exportBtn">Export</button>
+  <button id="importBtn">Import</button>
+  <input type="file" id="importFile" accept="application/json" style="display:none">
+  <a href="options.html" target="_blank">Settings</a>
+</footer>
+<script src="src/store.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>
